@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toy Shop</title>
+    <title>Phone Shop</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        body {
             background: #f4f4f4;
         }
 
         header {
-            background: #ff6f61;
-            color: white;
+            background: #111;
+            color: #fff;
             padding: 15px;
             text-align: center;
         }
 
         nav {
             background: #333;
-            padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
         nav a {
             color: white;
-            margin: 10px;
+            padding: 14px 20px;
             text-decoration: none;
-            font-weight: bold;
         }
 
         nav a:hover {
-            color: #ff6f61;
+            background: #555;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
         }
 
         .container {
@@ -41,22 +56,20 @@
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
         .card {
             background: white;
-            border-radius: 10px;
             padding: 15px;
+            border-radius: 10px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .card img {
             width: 100%;
-            height: 150px;
-            object-fit: cover;
             border-radius: 10px;
         }
 
@@ -64,25 +77,30 @@
             margin: 10px 0;
         }
 
-        .card p {
-            color: #555;
+        .price {
+            color: green;
+            font-weight: bold;
         }
 
         .btn {
             display: inline-block;
-            padding: 8px 12px;
-            background: #ff6f61;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
             margin-top: 10px;
+            padding: 10px 15px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #444;
         }
 
         footer {
-            background: #333;
+            background: #111;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             margin-top: 20px;
         }
     </style>
@@ -90,53 +108,58 @@
 <body>
 
 <header>
-    <h1>🧸 Happy Toy Shop</h1>
-    <p>Best Toys for Kids</p>
+    <h1>My Phone Shop</h1>
+    <p>Best Deals on Smartphones</p>
 </header>
 
 <nav>
     <a href="#">Home</a>
-    <a href="#">Toys</a>
-    <a href="#">About</a>
+    <a href="#">Products</a>
     <a href="#">Contact</a>
 </nav>
 
+<section class="hero">
+    <h1>Latest Smartphones</h1>
+    <p>Buy the best phones at affordable prices</p>
+</section>
+
 <div class="container">
-    <h2>Our Toys</h2>
-
+    <h2>Our Products</h2>
     <div class="products">
+
         <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Toy Car">
-            <h3>Toy Car</h3>
-            <p>Price: Rs. 500</p>
+            <img src="https://via.placeholder.com/200" alt="Phone">
+            <h3>iPhone 15</h3>
+            <p class="price">$999</p>
             <a href="#" class="btn">Buy Now</a>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Doll">
-            <h3>Doll</h3>
-            <p>Price: Rs. 700</p>
+            <img src="https://via.placeholder.com/200" alt="Phone">
+            <h3>Samsung Galaxy S23</h3>
+            <p class="price">$850</p>
             <a href="#" class="btn">Buy Now</a>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Teddy Bear">
-            <h3>Teddy Bear</h3>
-            <p>Price: Rs. 900</p>
+            <img src="https://via.placeholder.com/200" alt="Phone">
+            <h3>OnePlus 11</h3>
+            <p class="price">$700</p>
             <a href="#" class="btn">Buy Now</a>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Puzzle">
-            <h3>Puzzle Game</h3>
-            <p>Price: Rs. 400</p>
+            <img src="https://via.placeholder.com/200" alt="Phone">
+            <h3>Xiaomi 13</h3>
+            <p class="price">$650</p>
             <a href="#" class="btn">Buy Now</a>
         </div>
+
     </div>
 </div>
 
 <footer>
-    <p>© 2026 Happy Toy Shop | Made by You</p>
+    <p>© 2026 My Phone Shop | All Rights Reserved</p>
 </footer>
 
 </body>
